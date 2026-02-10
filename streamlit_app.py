@@ -7,6 +7,7 @@ model = joblib.load("churn_dt_model.pkl")
 
 st.title("Customer Churn Prediction App")
 st.write("Enter customer details to predict churn risk")
+st.info("Use the controls below to simulate different customer profiles.")
 
 # User Inputs 
 tenure = st.slider("Tenure (months)", 0, 72, 12)
