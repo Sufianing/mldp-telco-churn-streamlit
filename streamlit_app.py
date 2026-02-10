@@ -28,6 +28,8 @@ payment_method = st.selectbox(
     ["Electronic check", "Mailed check", "Bank transfer", "Credit card"]
 )
 
+st.caption("All inputs must be reviewed before generating a prediction.")
+
 #  Predict button 
 if st.button("Predict Customer Churn"):
 
