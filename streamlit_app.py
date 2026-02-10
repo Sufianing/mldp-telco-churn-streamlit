@@ -15,6 +15,11 @@ if tenure == 0:
     st.warning("Tenure is 0 months. This may indicate a new customer.")
 monthly_charges = st.slider("Monthly Charges ($)", 0, 200, 70)
 total_charges = st.slider("Total Charges ($)", 0, 10000, 1000)
+if total_charges == 0 and tenure > 12:
+    st.warning(
+        "Total charges are 0 despite long tenure. "
+        "Please verify if the input is correct."
+    )
 
 contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
 internet_service = st.selectbox("Internet Service", ["DSL", "Fiber optic", "No"])
