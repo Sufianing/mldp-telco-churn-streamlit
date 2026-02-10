@@ -11,6 +11,8 @@ st.info("Use the controls below to simulate different customer profiles.")
 
 # User Inputs 
 tenure = st.slider("Tenure (months)", 0, 72, 12)
+if tenure == 0:
+    st.warning("Tenure is 0 months. This may indicate a new customer.")
 monthly_charges = st.slider("Monthly Charges ($)", 0, 200, 70)
 total_charges = st.slider("Total Charges ($)", 0, 10000, 1000)
 
